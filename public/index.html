@@ -3,7 +3,7 @@
 <html data-wf-domain="www.thiagoimai.com" data-wf-page="61ffb7e3a4bdb56f0097a1a0" data-wf-site="61ffb7e3a4bdb5613297a19f">
     <head>
         <meta charset="utf-8" />
-        <title>Thiago Imai | Developer and photographer</title>
+        <title>Thiago Imai | iOS Developer</title>
         <meta content="Hi there, I am Thiago Imai, a Digital Designer and Art Director from Lima, Peru. Currently working at Build in Amsterdam, and as freelance helping brands and businesses become unique." name="description" />
         <meta content="Thiago Imai | Digital Designer and Art Director" property="og:title" />
         <meta content="Hi there, I am Thiago Imai, a Digital Designer and Art Director from Lima, Peru. Currently working at Build in Amsterdam, and as freelance helping brands and businesses become unique." property="og:description" />
@@ -53,6 +53,34 @@
                 color: #f8f8f8;
                 background: #1d1d1d;
             }
+
+            .section.is--hero {
+                position: relative;
+            }
+
+            .hero__idcard-wrapper {
+                position: absolute;
+                top: -120px;
+                left: 8%;
+                z-index: 10;
+                pointer-events: none;
+            }
+
+            .hero__idcard {
+                height: 95vh;
+                width: auto;
+                max-height: 95vh;
+                object-fit: contain;
+                object-position: top center;
+                display: block;
+                vertical-align: top;
+            }
+
+            @media screen and (max-width: 991px) {
+                .hero__idcard-wrapper {
+                    display: none !important;
+                }
+            }
         </style>
         <meta name="google-site-verification" content="ILBZMYMZM8i25ADpaMabWhAZ9MkOdskj6nh2p9_UlmQ" />
     </head>
@@ -88,6 +116,9 @@
         </div>
         <div class="page__wrapper">
             <section id="top" class="section is--hero wf-section">
+                <div class="hero__idcard-wrapper hide--mobile">
+                    <img src="assets/idcard.png" alt="Thiago Imai - iOS Developer" class="hero__idcard" loading="eager" />
+                </div>
                 <div class="container less--padding is--hero">
                     <div class="hero__grid__row">
                         <a id="w-node-bf78fc9c-735e-02d8-3ae1-52011af45b1e-0097a1a0" data-w-id="bf78fc9c-735e-02d8-3ae1-52011af45b1e" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" href="/" aria-current="page" class="nav__logo w-inline-block w--current">
@@ -110,8 +141,8 @@
                     </div>
                     <div class="hero__grid__row is__hero__text">
                         <div id="w-node-e3f00ec3-d0af-0c55-aa2a-d31fbbae2222-0097a1a0" class="hero__text__wrapper">
-                            <h1 data-w-id="c7a912a8-83e6-784c-a2ff-cdfeecbfcd60" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hero__heading">Developer and Photographer currently based in Curitiba - Brasil</h1>
-                            <p data-w-id="ae043aae-55f2-4eaa-8463-8fba179d3065" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hero__p">Hello, I am Thiago Imai a Developer from Nagano, Japan. Currently working as a React Native Developer and Project Manager.</p>
+                            <h1 data-w-id="c7a912a8-83e6-784c-a2ff-cdfeecbfcd60" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hero__heading">I talk to robots!</h1>
+                            <p data-w-id="ae043aae-55f2-4eaa-8463-8fba179d3065" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hero__p">Hello, I am a developer currently based in Curitiba, Brazil.</p>
                             <a href="#about" data-w-id="f901cf0d-3867-88df-7b4e-da1c3a21f2fd" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="button is--white hide--mobile w-inline-block">
                                 <div class="button__mask">
                                     <div class="button__content">
@@ -131,9 +162,9 @@
                     </div>
                     <div class="hero__grid__row is__hero__btm">
                         <div id="w-node-_1568ebb8-5992-e06f-243e-a62c2980bdf7-0097a1a0" data-w-id="1568ebb8-5992-e06f-243e-a62c2980bdf7" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hero__socials__wrapper">
-                            <a id="w-node-c7f833dc-26d1-5d67-823c-d0d62c3a1905-0097a1a0" href="https://gitlab.com/tigulima" target="_blank" class="text__link">gitlab</a>
+                            <a id="w-node-c7f833dc-26d1-5d67-823c-d0d62c3a1905-0097a1a0" href="https://github.com/tigulima" target="_blank" class="text__link">github</a>
                             <a id="w-node-b64b4a32-875e-6bb4-40f6-2c19ef82141a-0097a1a0" href="https://www.linkedin.com/in/tigulima/" target="_blank" class="text__link">linkedin</a>
-                            <a id="w-node-e54b5e97-d94e-ca63-bfc1-1b59c6a6c81f-0097a1a0" href="https://www.instagram.com/thiago.imai.l/" target="_blank" class="text__link">instagram</a>
+                            <a id="w-node-e54b5e97-d94e-ca63-bfc1-1b59c6a6c81f-0097a1a0" href="https://www.instagram.com/tigulima/" target="_blank" class="text__link">instagram</a>
                         </div>
                         <div id="w-node-_30a330bc-833a-e1ef-15a1-ffcbfde11b94-0097a1a0" data-w-id="30a330bc-833a-e1ef-15a1-ffcbfde11b94" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hero__coords">N  - 25°46&#x42;58.23<br />E  - 49°23&#x30;53.97 </div>
                         <div id="w-node-c131efdc-5258-a8ff-d619-92cf4741eff1-0097a1a0" data-w-id="c131efdc-5258-a8ff-d619-92cf4741eff1" style="-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="hero__copyright">© 2022</div>
@@ -144,9 +175,9 @@
                 <div class="container less--padding">
                     <div class="about__grid is--top">
                         <div id="w-node-_3283ef35-7588-8447-c6ed-a0595a317a20-0097a1a0" class="reveal hide--on--mobile">ABOUT</div>
-                        <p id="w-node-_00726e54-85d2-2bea-630d-f0a172172c83-0097a1a0" class="about__large__text reveal">I am passionate about everything that has to do with Development and Photography. I enjoy working with agencies and enthusiastic people who want to solve problems through beautiful design and experiences.</p>
+                        <p id="w-node-_00726e54-85d2-2bea-630d-f0a172172c83-0097a1a0" class="about__large__text reveal">I belong to a team that approaches every challenge with a heartfelt intensity, dedicated to building solutions that are personally meaningful to us as creators and life-changing for our users.</p>
                         <div id="w-node-_2e84cf83-515a-bee9-ae85-9a0b34f46735-0097a1a0" class="about__img__wrapper">
-                            <img src="./assets/profile.jpg" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 24vw, 17vw" alt="portrait of Thiago Imai" class="about__img" />
+                            <img src="./assets/profile.jpeg" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 24vw, 17vw" alt="portrait of Thiago Imai" class="about__img" />
                         </div>
                     </div>
                     <div class="about__grid">
@@ -453,8 +484,8 @@
             <section class="section padding__top-bottom playground wf-section">
                 <div class="container padding">
                     <div class="centered__text">
-                        <h4 class="playground__heading reveal">The Developer Side</h4>
-                        <p class="max--400 reveal">I love playing with new development tools and environments. Explore my concepts and experiments for more work</p>
+                        <h4 class="playground__heading reveal">Experience</h4>
+                        <p class="max--400 reveal">I am always playing with new development tools and environments. Explore my concepts and experiments for more work</p>
                     </div>
                     <div class="w-embed">
                         <style>
@@ -480,7 +511,20 @@
                             <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
                                 <div class="horizontal__line is--playground"></div>
                                 <div class="playground__info">
-                                    <a href="subtract/index.html">
+                                    <a href="projects/subtract/index.html">
+                                        <div class="playground__item__name">CANÁRIO </div>
+                                    </a>
+                                    <div class="playground__item__toggle">
+                                        <div class="toggle__line"></div>
+                                        <div class="toggle__line horizontal"></div>
+                                    </div>
+                                </div>
+                                <img src="assets/projects/subtract.jpeg" loading="lazy" alt="SUBTRACT" class="playground__image" />
+                            </div>
+                            <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
+                                <div class="horizontal__line is--playground"></div>
+                                <div class="playground__info">
+                                    <a href="projects/subtract/index.html">
                                         <div class="playground__item__name">SUBTRACT </div>
                                     </a>
                                     <div class="playground__item__toggle">
@@ -488,7 +532,7 @@
                                         <div class="toggle__line horizontal"></div>
                                     </div>
                                 </div>
-                                <img src="assets/subtract.png" loading="lazy" alt="SUBTRACT" class="playground__image" />
+                                <img src="assets/projects/subtract.jpeg" loading="lazy" alt="SUBTRACT" class="playground__image" />
                             </div>
                             <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
                                 <div class="horizontal__line is--playground"></div>
@@ -501,7 +545,7 @@
                                         <div class="toggle__line horizontal"></div>
                                     </div>
                                 </div>
-                                <img src="assets/anjo.png" loading="lazy" alt="AIME LEON DORE MOBILES" class="playground__image" />
+                                <img src="assets/projects/anjo.jpeg" loading="lazy" alt="AIME LEON DORE MOBILES" class="playground__image" />
                             </div>
                             <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
                                 <div class="horizontal__line is--playground"></div>
@@ -514,7 +558,7 @@
                                         <div class="toggle__line horizontal"></div>
                                     </div>
                                 </div>
-                                <img src="assets/kaioProductions.png" loading="lazy" alt="ORRIS JOURNAL CAROUSEL " class="playground__image" />
+                                <img src="assets/projects/kaioProductions.jpeg" loading="lazy" alt="ORRIS JOURNAL CAROUSEL " class="playground__image" />
                             </div>
                             <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
                                 <div class="horizontal__line is--playground"></div>
@@ -527,7 +571,7 @@
                                         <div class="toggle__line horizontal"></div>
                                     </div>
                                 </div>
-                                <img src="assets/perguntArtes.png" loading="lazy" alt="ROMAN VLASOV CONCEPT #709" class="playground__image" />
+                                <img src="assets/projects/perguntArtes.jpeg" loading="lazy" alt="ROMAN VLASOV CONCEPT #709" class="playground__image" />
                             </div>
                             <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
                                 <div class="horizontal__line is--playground"></div>
@@ -540,20 +584,7 @@
                                         <div class="toggle__line horizontal"></div>
                                     </div>
                                 </div>
-                                <img src="assets/radyo.png" loading="lazy" alt="SAHANA WELLNESS JOURNAL" class="playground__image" />
-                            </div>
-                            <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
-                                <div class="horizontal__line is--playground"></div>
-                                <div class="playground__info">
-                                    <a href="#">
-                                        <div class="playground__item__name">TIGULIMA PRODUCTIONS </div>
-                                    </a>
-                                    <div class="playground__item__toggle">
-                                        <div class="toggle__line"></div>
-                                        <div class="toggle__line horizontal"></div>
-                                    </div>
-                                </div>
-                                <img src="assets/tigulimaProductions.png" loading="lazy" alt="GUBI FURNITURE PRODUCT PAGE" class="playground__image" />
+                                <img src="assets/projects/radyo.jpeg" loading="lazy" alt="SAHANA WELLNESS JOURNAL" class="playground__image" />
                             </div>
                             <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
                                 <div class="horizontal__line is--playground"></div>
@@ -566,33 +597,7 @@
                                         <div class="toggle__line horizontal"></div>
                                     </div>
                                 </div>
-                                <img src="assets/yelowBox.png" loading="lazy" alt="AIME LEON DORE PRODUCT " class="playground__image" />
-                            </div>
-                            <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
-                                <div class="horizontal__line is--playground"></div>
-                                <div class="playground__info">
-                                    <a href="https://gitlab.com/tigulima/jester-discord-bot">
-                                        <div class="playground__item__name">JESTER - Personal Project </div>
-                                    </a>
-                                    <div class="playground__item__toggle">
-                                        <div class="toggle__line"></div>
-                                        <div class="toggle__line horizontal"></div>
-                                    </div>
-                                </div>
-                                <img src="assets/jester.png" loading="lazy" alt="ORRIS HOMEPAGE " class="playground__image" />
-                            </div>
-                            <div data-scroll="1" data-w-id="75ff0bc8-b744-12f5-b05d-909bb8915e63" role="listitem" class="playground__item w-dyn-item">
-                                <div class="horizontal__line is--playground"></div>
-                                <div class="playground__info">
-                                    <a href="https://gitlab.com/tigulima/arch-dotfiles">
-                                        <div class="playground__item__name">LEMONY DOTFILES - Personal Project </div>
-                                    </a>
-                                    <div class="playground__item__toggle">
-                                        <div class="toggle__line"></div>
-                                        <div class="toggle__line horizontal"></div>
-                                    </div>
-                                </div>
-                                <img src="assets/distro.png" loading="lazy" alt="GUBI FEATURED PRODUCTS " class="playground__image" />
+                                <img src="assets/projects/yelowBox.jpeg" loading="lazy" alt="AIME LEON DORE PRODUCT " class="playground__image" />
                             </div>
                         </div>
                     </div>
@@ -603,46 +608,28 @@
                 <div class="container is--full__width">
                     <div data-scroll="1" class="img__wrapper">
                         <div data-scroll="1" class="img__cover"></div>
-                        <img src="assets/transitionAlt.JPG" loading="lazy" alt="GIF animation with mockups of designed screens." class="full__width--image" />
+                        <img src="assets/transitionAlt.jpeg" loading="lazy" alt="GIF animation with mockups of designed screens." class="full__width--image" />
                     </div>
                 </div>
             </section>
             <section class="section padding__bottom wf-section">
                 <div class="container padding less--mobile">
                     <div class="_4__column__grid">
-                        <p id="w-node-eb7009c3-c54e-a4dd-bc36-a3ab14ed166f-0097a1a0" class="large__text desktop--only">Studied Computing at IFPR and now studying Computer science at UFPR.</p>
+                        <p id="w-node-eb7009c3-c54e-a4dd-bc36-a3ab14ed166f-0097a1a0" class="large__text desktop--only">Studying computer science at UFPR and developing iOS apps at Apple Developer Academy.</p>
                         <p id="w-node-_089f81df-4c67-104a-6da9-3654f1741341-0097a1a0" class="large__text mobile--only reveal">Studied Computing at IFPR – Ivaipora for four years then decided to continue gaining knowledge and moved to Curitiba to study Computer Science at UFPR – Curitiba.</p>
                         <div id="w-node-_9841d9cc-304b-53e9-de3e-46d86f98aaaa-0097a1a0">
                             <p class="medium__text reveal">Developed the very first website when I was 13, since then it has been a ton of self improvement. Currently working as a developer, helping companies to solve problems through effective design and experiences.</p>
-                            <div data-w-id="254b0fe9-f937-e68d-ba79-134f66ccfbad" class="regular__text larger margin reveal">These are some of the clients I’ve been lucky to work with:</div>
+                            <div data-w-id="254b0fe9-f937-e68d-ba79-134f66ccfbad" class="regular__text larger margin reveal">These are some of the projects I’ve been lucky to work with:</div>
                             <div class="w-dyn-list">
                                 <div role="list" class="_3__column__grid-small w-dyn-items">
                                     <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Vido Latino</h5>
+                                        <h5 class="regular__text larger reveal-rotate">Apple Developer Academy</h5>
                                     </div>
                                     <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Q-Flux</h5>
+                                        <h5 class="regular__text larger reveal-rotate">Techmobi</h5>
                                     </div>
                                     <div role="listitem" class="w-dyn-item">
                                         <h5 class="regular__text larger reveal-rotate">Up Ideias</h5>
-                                    </div>
-                                    <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">IFPR</h5>
-                                    </div>
-                                    <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Sonia Mendez</h5>
-                                    </div>
-                                    <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Raquel Tamashiro</h5>
-                                    </div>
-                                    <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Kaio Productions</h5>
-                                    </div>
-                                    <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Yelow Box</h5>
-                                    </div>
-                                    <div role="listitem" class="w-dyn-item">
-                                        <h5 class="regular__text larger reveal-rotate">Tigulima Productions</h5>
                                     </div>
                                 </div>
                             </div>
@@ -675,23 +662,23 @@
                         <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159342-0097a1a0" class="w-dyn-list">
                             <div role="list" class="_3__column__grid w-dyn-items">
                                 <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
+                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2025 –– Present</div>
+                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Apple Developer Academy</div>
+                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">Apple & Puc, Curitiba</div>
+                                </div>
+                                <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2020 –– Present</div>
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Computer Science</div>
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">UFPR, Curitiba</div>
                                 </div>
                                 <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2022 –– Present</div>
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Introduction to Computer Science</div>
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">Harvard, MA</div>
-                                </div>
-                                <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2021 –– Present</div>
+                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2021 –– 2022</div>
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Chinese</div>
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">Unesp, SP</div>
                                 </div>
                                 <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2016 –– 2019</div>
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Computing</div>
+                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Computer Technician</div>
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">IFPR, Ivaipora</div>
                                 </div>
                                 <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
@@ -714,114 +701,9 @@
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Arduino Fighter Robot Project</div>
                                     <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">IFPR, Ivaipora</div>
                                 </div>
-                                <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159344-0097a1a0" role="listitem" class="experience__item w-dyn-item">
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159345-0097a1a0" class="regular__text reveal-rotate">2013–– 2013</div>
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159346-0097a1a0" class="regular__text reveal-rotate">Computing</div>
-                                    <div id="w-node-f417ea96-371d-cef7-28c9-e2054e159347-0097a1a0" class="regular__text reveal-rotate">Bradesco Foundation</div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="horizontal__line extra--padding"></div> -->
-                    <!-- <div class="_4__column__grid">
-                        <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b5415-0097a1a0" class="two__buttons margin--bottom">
-                            <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b5416-0097a1a0" class="main__button is--small reveal-rotate">awards</div>
-                            <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b5418-0097a1a0" class="main__button is--small reveal-rotate">recognitions</div>
-                        </div>
-                        <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541a-0097a1a0" class="hide--mobile w-dyn-list">
-                            <div role="list" class="_3__column__grid w-dyn-items">
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Personal Portfolio XD Behance</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Personal Portfolio - UI Behance</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Nest Seekers - Behance UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Tais Kahatt - Awwwards</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Roman Vlasov – AIGA Gallery</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Tais Kahatt - CSS Design Awards</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Gubi – AIGA Gallery</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Roman Vlasov – Behance UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Orris Paris – Behance Gallery</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">ALD – Behance UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">ALD – Behance XD</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Vipp – Behance UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Vipp – Behance XD</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Rowse – Behance UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Rowse – Behance XD </h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Cold Laundry – Behance UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Cold Laundry – Behance XD</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">H.Weekend – Behance UX/UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">H.Weekend – Behance XD</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Gubi – Behance UX/UI</h6>
-                                </div>
-                                <div id="w-node-_2b2657de-2b85-0d00-2a0c-8457dd8b541c-0097a1a0" role="listitem" class="w-dyn-item">
-                                    <h6 class="regular__text is--award reveal-rotate">Rains – AIGA Gallery</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="w-node-_69152549-432f-befa-9796-8c4ba04f5aa8-0097a1a0" class="awards__list show--mobile">
-                            <div id="w-node-b7489257-7865-ce2e-c2f6-66f06cc9d5dd-0097a1a0" class="award__item reveal">
-                                <h6 class="regular__text">Behance Gallery</h6>
-                                <div>x01</div>
-                            </div>
-                            <div id="w-node-_86fb06cd-907c-5179-d7c8-f17fe6590139-0097a1a0" class="award__item reveal">
-                                <h6 class="regular__text">Awwwards</h6>
-                                <div>x01</div>
-                            </div>
-                            <div id="w-node-_8330db8b-0356-2ba7-e67c-e6252eb7c8e5-0097a1a0" class="award__item reveal">
-                                <h6 class="regular__text">CSS Design Awards</h6>
-                                <div>x03</div>
-                            </div>
-                            <div id="w-node-_0993ac43-b3c2-0c64-0c70-bd045e328773-0097a1a0" class="award__item reveal">
-                                <h6 class="regular__text">AIGA Gallery</h6>
-                                <div>x04</div>
-                            </div>
-                            <div id="w-node-c5fd9ae9-a8a1-f8ba-188e-5b8b772e8c23-0097a1a0" class="award__item reveal">
-                                <h6 class="regular__text">Behance UI Gallery</h6>
-                                <div>x09</div>
-                            </div>
-                            <div id="w-node-_821abd61-bc93-a5e6-0e97-0799da50d11d-0097a1a0" class="award__item reveal">
-                                <h6 class="regular__text">Behance Adobe XD Gallery</h6>
-                                <div>x08</div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </section>
             <div class="curved__end"></div>
@@ -849,7 +731,7 @@
                                 </div>
                             </div>
                             <div class="footer__mobile__content">
-                                <div id="w-node-_0e1fef75-fa66-7640-d72f-fd89a5564d2e-a5564d15" class="footer__small is--center">PORTFOLIO 2022✺</div>
+                                <div id="w-node-_0e1fef75-fa66-7640-d72f-fd89a5564d2e-a5564d15" class="footer__small is--center">PORTFOLIO 2022</div>
                                 <div id="w-node-_0e1fef75-fa66-7640-d72f-fd89a5564d30-a5564d15" class="footer__link">works from</div>
                                 <div id="w-node-_0e1fef75-fa66-7640-d72f-fd89a5564d32-a5564d15" class="footer__link">2020 – 2022</div>
                                 <div id="w-node-_0e1fef75-fa66-7640-d72f-fd89a5564d34-a5564d15" class="footer__link">
