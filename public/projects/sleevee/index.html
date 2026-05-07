@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleevee | Organize your cards with AI</title>
+    <meta
+      name="description"
+      content="Sleevee helps you organize your collectible cards with smart scanning, quick review, and perfect binders."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <p class="brand">Sleevee</p>
+        <a class="btn btn-secondary" href="#contact">Join waitlist</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-content">
+          <p class="eyebrow">Your smart collection manager</p>
+          <h1>Organize your collection in seconds</h1>
+          <p class="subtitle">
+            Scan, review, and organize your cards with a premium experience
+            built for collectors.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#features">Explore features</a>
+            <a class="btn btn-ghost" href="#screens">View screens</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="./assets/images/scanner-view.png"
+            alt="Sleevee scanner screen"
+          />
+        </div>
+      </section>
+
+      <section id="features" class="features container">
+        <article class="card">
+          <h2>Smart scanner</h2>
+          <p>
+            Detect cards quickly with real-time camera capture and a simple
+            validation flow.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Batch review</h2>
+          <p>
+            Review and adjust multiple captures before saving, reducing errors
+            and speeding up your workflow.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Organized binders</h2>
+          <p>
+            Build collections visually with set tracking, quantity control, and
+            intuitive navigation.
+          </p>
+        </article>
+      </section>
+
+      <section id="screens" class="screens container">
+        <h2>Real product screens</h2>
+        <p>
+          Screenshots imported from your Figma source via MCP to keep this
+          promo fully aligned with the design.
+        </p>
+        <div class="screen-grid">
+          <figure>
+            <img
+              src="./assets/images/scanner-view.png"
+              alt="Sleevee ScannerView screen"
+            />
+            <figcaption>Scanner</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/images/review-sheet.png"
+              alt="Sleevee ReviewSheet screen"
+            />
+            <figcaption>Review Sheet</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/images/binder-view.png"
+              alt="Sleevee BinderView screen"
+            />
+            <figcaption>Binder View</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="contact" class="cta container">
+        <h2>Ready to level up your collection?</h2>
+        <p>Join the Sleevee early access waitlist.</p>
+        <form class="cta-form">
+          <input type="email" placeholder="you@email.com" required />
+          <button class="btn btn-primary" type="submit">Join waitlist</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Sleevee. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
