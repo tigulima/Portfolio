@@ -1,0 +1,267 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-family: 'Inter', sans-serif;
+	background-image:
+		linear-gradient(rgba(40, 12, 20, 0.22), rgba(40, 12, 20, 0.22)),
+		linear-gradient(135deg, #be123c 0%, #f43f5e 45%, #fb7185 100%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.view {
+	width: 100vw;
+	min-height: 50vh;
+	position: relative;
+}
+
+.view-top {
+	background-color: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(1px);
+}
+
+.view-bottom {
+	background-color: rgba(255, 255, 255, 0.55);
+	backdrop-filter: blur(4px);
+}
+
+.logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	min-height: 50vh;
+}
+
+.brand {
+	font-size: clamp(48px, 11vw, 140px);
+	font-weight: 200;
+	letter-spacing: 0.2em;
+	margin: 0;
+	color: #ffffff;
+	text-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 50vh;
+	padding: 5vh 20px 20px;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+}
+
+.text-item {
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+	margin: 10px 0;
+	padding: 0 10px;
+	color: #4a1a24;
+}
+
+.text-item:last-of-type {
+	padding-top: 5vh;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+	padding-top: 5vh;
+}
+
+.input-group {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	max-width: 450px;
+}
+
+.email-input {
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	color: #4a1a24;
+	padding: 10px 20px;
+	width: 100%;
+	font-size: 14px;
+}
+
+.submit-button {
+	background-color: #be123c;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	white-space: nowrap;
+	min-width: 100px;
+}
+
+.footer-links {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 15px;
+	padding: 10px;
+	flex-wrap: wrap;
+}
+
+.footer-link {
+	font-size: 12px;
+	text-align: center;
+	cursor: pointer;
+	color: #4a1a24;
+	text-decoration: none;
+}
+
+.feedback {
+	font-size: 14px;
+	font-weight: 300;
+	margin-top: 10px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	display: none;
+	width: 100%;
+	max-width: 450px;
+	text-align: center;
+}
+
+.feedback.success {
+	background-color: #4caf50;
+	color: white;
+	display: block;
+}
+
+.feedback.error {
+	background-color: #f44336;
+	color: white;
+	display: block;
+}
+
+.fade-in {
+	opacity: 0;
+	transform: translate3d(0, 20px, 0);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+	.text-item {
+		font-size: 15px;
+	}
+
+	.content-container {
+		padding: 3vh 20px 20px;
+	}
+
+	.text-item:last-of-type {
+		padding-top: 3vh;
+	}
+
+	.button-container {
+		padding-top: 3vh;
+	}
+}
+
+@media (max-width: 480px) {
+	.view {
+		min-height: auto;
+	}
+
+	.logo-container {
+		min-height: 40vh;
+		padding: 20px;
+	}
+
+	.content-container {
+		min-height: 60vh;
+		padding: 20px 15px;
+	}
+
+	.text-item {
+		font-size: 14px;
+		margin: 8px 0;
+	}
+
+	.text-item:last-of-type {
+		padding-top: 2vh;
+	}
+
+	.button-container {
+		padding-top: 2vh;
+	}
+
+	.input-group {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.email-input {
+		width: 100%;
+		padding: 12px 15px;
+	}
+
+	.submit-button {
+		width: 100%;
+		padding: 12px 15px;
+	}
+
+	.footer-links {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		justify-content: center;
+		padding: 15px 10px;
+		gap: 10px;
+	}
+
+	.footer-link {
+		font-size: 11px;
+	}
+
+	.feedback {
+		font-size: 12px;
+		padding: 8px 15px;
+	}
+}
+
+@media (max-width: 360px) {
+	.text-item {
+		font-size: 13px;
+	}
+
+	.footer-link {
+		font-size: 10px;
+	}
+}
