@@ -406,8 +406,28 @@
 
   var returnSlug = null;
 
-  function openCase(slug) {
+  // ---- historico: cada case e uma entrada, para o voltar do navegador -----
+  // O endereco usa hash e nao caminho de propriedade: o Firebase Hosting serve
+  // arquivos estaticos, entao recarregar /etique daria 404 sem um rewrite.
+  var SLUGS = ['etique', 'canario', 'subtract', 'sleevee', 'extensionista', 'anjo'];
+
+  function routeFromUrl() {
+    var h = (location.hash || '').replace(/^#/, '');
+    return SLUGS.indexOf(h) !== -1 ? h : 'home';
+  }
+
+  function pushRoute(slug) {
+    if (!window.history || !history.pushState) return;
+    var url = slug === 'home'
+      ? location.pathname + location.search
+      : '#' + slug;
+    history.pushState({ route: slug }, '', url);
+  }
+
+  // fromHistory: a mudanca ja veio do navegador, empilhar de novo criaria um laco
+  function openCase(slug, fromHistory) {
     returnSlug = slug;
+    if (!fromHistory) pushRoute(slug);
     withCurtain(function () {
       origText.clear();
       state.route = slug;
@@ -416,8 +436,9 @@
     });
   }
 
-  function backToWork() {
+  function backToWork(fromHistory) {
     var slug = returnSlug;
+    if (!fromHistory) pushRoute('home');
     withCurtain(function () {
       origText.clear();
       state.route = 'home';
@@ -429,6 +450,7 @@
 
   function toSection(id) {
     if (state.route !== 'home') {
+      pushRoute('home');
       origText.clear();
       state.route = 'home';
       state.section = id;
@@ -457,6 +479,7 @@
   // ---- acoes, enderecadas por data-act ------------------------------------
   var actions = {
     goHome: function () {
+      if (state.route !== 'home') pushRoute('home');
       origText.clear();
       state.route = 'home';
       state.section = 'hero';
@@ -525,6 +548,27 @@
     // a escala dos aparelhos do hero, que era uma prop do editor
     var hv = document.querySelector('[data-hero-vars]');
     if (hv) hv.style.setProperty('--ph-scale', '1.45');
+
+    // o endereco manda na rota inicial, entao um link para um case abre nele
+    var inicial = routeFromUrl();
+    if (inicial !== 'home') {
+      state.route = inicial;
+      state.section = 'work';
+      returnSlug = inicial;
+    }
+    if (window.history) {
+      // o navegador restauraria a rolagem antes de a rota ser aplicada
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (history.replaceState) history.replaceState({ route: inicial }, '');
+    }
+
+    // voltar/avancar do navegador: aplica a rota do endereco sem reempilhar
+    window.addEventListener('popstate', function () {
+      var alvo = routeFromUrl();
+      if (alvo === state.route) return;
+      if (alvo === 'home') backToWork(true);
+      else openCase(alvo, true);
+    });
 
     render();
     driveHero();
