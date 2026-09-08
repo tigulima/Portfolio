@@ -1,0 +1,16 @@
+:root{
+/* The brand-defining element. Once per page, max — as a line, never a fill. */
+--gradient-spectrum-marquee:linear-gradient(270deg,#fd02f5,#fa3d1d 15.94%,#ffb005 42.76%,#e1e1fe 72.48%,#0358f7 100.02%,#340b05 150.75%);
+/* Seamless-loop variant: the same stops run forward then mirrored inside one tile,
+   so a scrolling marquee has no hard pink→blue seam where the tile repeats. */
+--gradient-spectrum-marquee-loop:linear-gradient(to right,#fd02f5 0%,#fa3d1d 7.97%,#ffb005 21.38%,#e1e1fe 36.24%,#0358f7 50%,#e1e1fe 63.76%,#ffb005 78.62%,#fa3d1d 92.03%,#fd02f5 100%);
+/* Decorative 180deg blends: warm stop at 60% → cool stop at 100%.
+   Used inside illustrations and background washes only. */
+--gradient-creamsicle:linear-gradient(180deg,#ffb005 60%,#fd6f3d 100%);
+--gradient-grapefruit:linear-gradient(180deg,#fa3d1d 60%,#fd02f5 100%);
+--gradient-cotton-candy:linear-gradient(180deg,#ffd9f7 60%,#e1e1fe 100%);
+--gradient-sunshine:linear-gradient(180deg,#ffdc5c 60%,#f2fcb3 100%);
+--gradient-twilight:linear-gradient(180deg,#e1e1fe 60%,#0358f7 100%);
+--gradient-midnight:linear-gradient(180deg,#340b05 60%,#020204 100%);
+--gradient-student:linear-gradient(180deg,#f2fcb3 60%,#0358f7 100%);
+}
