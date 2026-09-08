@@ -538,38 +538,38 @@ button,input,select,textarea{font:inherit;color:inherit}
 [data-if][hidden]{display:none !important}
 
 /* ---- estados :hover extraidos dos style-hover ---- */
-.hv-1:hover{background: var(--fill-secondary)}
-.hv-2:hover{color: var(--text-inverse)}
-.hv-3:hover{color: var(--text-inverse)}
-.hv-4:hover{transform: rotate(-1.1deg) scale(1.025); box-shadow: var(--shadow-xl); position: relative; z-index: 2}
-.hv-5:hover{transform: rotate(0.8deg) scale(1.025); box-shadow: var(--shadow-xl); position: relative; z-index: 2}
-.hv-6:hover{transform: rotate(-0.7deg) scale(1.025); box-shadow: var(--shadow-xl); position: relative; z-index: 2}
-.hv-7:hover{transform: rotate(1.2deg) scale(1.025); box-shadow: var(--shadow-xl); position: relative; z-index: 2}
-.hv-8:hover{transform: rotate(-0.9deg) scale(1.025); box-shadow: var(--shadow-xl); position: relative; z-index: 2}
-.hv-9:hover{transform: rotate(0.6deg) scale(1.025); box-shadow: var(--shadow-xl); position: relative; z-index: 2}
-.hv-10:hover{background: var(--surface-linen)}
-.hv-11:hover{transform: rotate(-1.1deg) scale(1.025); box-shadow: var(--shadow-xl)}
-.hv-12:hover{transform: rotate(0.8deg) scale(1.025); box-shadow: var(--shadow-xl)}
-.hv-13:hover{transform: rotate(-0.7deg) scale(1.025); box-shadow: var(--shadow-xl)}
-.hv-14:hover{transform: rotate(1.2deg) scale(1.025); box-shadow: var(--shadow-xl)}
-.hv-15:hover{transform: rotate(-0.9deg) scale(1.025); box-shadow: var(--shadow-xl)}
-.hv-16:hover{background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.45)}
-.hv-17:hover{background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.45)}
-.hv-18:hover{background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.45)}
-.hv-19:hover{color: var(--text-inverse)}
-.hv-20:hover{background: var(--fill-graphite)}
-.hv-21:hover{background: rgba(255,255,255,0.06)}
-.hv-22:hover{color: var(--text-inverse)}
-.hv-23:hover{background: var(--fill-graphite)}
-.hv-24:hover{background: rgba(255,255,255,0.06)}
-.hv-25:hover{color: var(--text-inverse)}
-.hv-26:hover{background: var(--fill-graphite)}
-.hv-27:hover{background: rgba(255,255,255,0.06)}
-.hv-28:hover{color: var(--text-inverse)}
-.hv-29:hover{background: var(--fill-graphite)}
-.hv-30:hover{background: rgba(255,255,255,0.06)}
-.hv-31:hover{color: var(--text-inverse)}
-.hv-32:hover{background: var(--fill-graphite)}
-.hv-33:hover{background: rgba(255,255,255,0.06)}
-.hv-34:hover{color: var(--text-inverse)}
-.hv-35:hover{background: rgba(255,255,255,0.06)}
+.hv-1:hover{background: var(--fill-secondary) !important}
+.hv-2:hover{color: var(--text-inverse) !important}
+.hv-3:hover{color: var(--text-inverse) !important}
+.hv-4:hover{transform: rotate(-1.1deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important;position: relative !important;z-index: 2 !important}
+.hv-5:hover{transform: rotate(0.8deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important;position: relative !important;z-index: 2 !important}
+.hv-6:hover{transform: rotate(-0.7deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important;position: relative !important;z-index: 2 !important}
+.hv-7:hover{transform: rotate(1.2deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important;position: relative !important;z-index: 2 !important}
+.hv-8:hover{transform: rotate(-0.9deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important;position: relative !important;z-index: 2 !important}
+.hv-9:hover{transform: rotate(0.6deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important;position: relative !important;z-index: 2 !important}
+.hv-10:hover{background: var(--surface-linen) !important}
+.hv-11:hover{transform: rotate(-1.1deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important}
+.hv-12:hover{transform: rotate(0.8deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important}
+.hv-13:hover{transform: rotate(-0.7deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important}
+.hv-14:hover{transform: rotate(1.2deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important}
+.hv-15:hover{transform: rotate(-0.9deg) scale(1.025) !important;box-shadow: var(--shadow-xl) !important}
+.hv-16:hover{background: rgba(255,255,255,0.06) !important;border-color: rgba(255,255,255,0.45) !important}
+.hv-17:hover{background: rgba(255,255,255,0.06) !important;border-color: rgba(255,255,255,0.45) !important}
+.hv-18:hover{background: rgba(255,255,255,0.06) !important;border-color: rgba(255,255,255,0.45) !important}
+.hv-19:hover{color: var(--text-inverse) !important}
+.hv-20:hover{background: var(--fill-graphite) !important}
+.hv-21:hover{background: rgba(255,255,255,0.06) !important}
+.hv-22:hover{color: var(--text-inverse) !important}
+.hv-23:hover{background: var(--fill-graphite) !important}
+.hv-24:hover{background: rgba(255,255,255,0.06) !important}
+.hv-25:hover{color: var(--text-inverse) !important}
+.hv-26:hover{background: var(--fill-graphite) !important}
+.hv-27:hover{background: rgba(255,255,255,0.06) !important}
+.hv-28:hover{color: var(--text-inverse) !important}
+.hv-29:hover{background: var(--fill-graphite) !important}
+.hv-30:hover{background: rgba(255,255,255,0.06) !important}
+.hv-31:hover{color: var(--text-inverse) !important}
+.hv-32:hover{background: var(--fill-graphite) !important}
+.hv-33:hover{background: rgba(255,255,255,0.06) !important}
+.hv-34:hover{color: var(--text-inverse) !important}
+.hv-35:hover{background: rgba(255,255,255,0.06) !important}
