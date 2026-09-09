@@ -534,8 +534,10 @@ button,input,select,textarea{font:inherit;color:inherit}
   background-image:var(--gradient-spectrum-marquee-loop);background-size:200% 100%;
   background-repeat:repeat;animation:tarde-marquee var(--duration-marquee) linear infinite}
 
-/* wrappers de rota: transparentes ao layout quando visiveis */
-[data-if][hidden]{display:none !important}
+/* O display:none que o atributo hidden traz vem da folha do navegador e perde
+   para o style inline, e quase todo elemento aqui carrega o seu. Sem isto, um
+   bloco marcado como hidden continua na tela. */
+[hidden]{display:none !important}
 
 /* ---- menu mobile --------------------------------------------------------
    As duas barras se encontram no meio e cruzam: cada uma anda 3.25px, que e

@@ -375,10 +375,20 @@
   }
 
   // ---- o processo se le sozinho conforme voce rola ------------------------
+  // O processo do case aberto, nao o primeiro do documento: com mais de um
+  // projeto tendo processo, os outros continuam no DOM, so que ocultos.
+  function trilhaVisivel() {
+    var todas = document.querySelectorAll('.ptrack');
+    for (var i = 0; i < todas.length; i++) {
+      if (todas[i].offsetParent !== null) return todas[i];
+    }
+    return null;
+  }
+
   function driveProcess() {
-    var track = document.querySelector('.ptrack');
-    var step = document.querySelector('.pstep');
-    if (!track || !step || !track.offsetParent) return;
+    var track = trilhaVisivel();
+    var step = track && track.querySelector('.pstep');
+    if (!track || !step) return;
     var steps = step.parentElement.children.length;
     var stick = track.firstElementChild;
     var travel = track.offsetHeight - stick.offsetHeight;
@@ -396,7 +406,8 @@
 
   // celular: a tira de passos rola sozinha para o ativo ficar a vista
   function followStep(i) {
-    var ol = document.querySelector('.pgrid > ol');
+    var track = trilhaVisivel();
+    var ol = track && track.querySelector('.pgrid > ol');
     if (!ol || ol.scrollWidth <= ol.clientWidth + 4) return;
     var li = ol.children[i - 1];
     if (!li) return;
@@ -466,6 +477,9 @@
     withCurtain(function () {
       origText.clear();
       state.route = slug;
+      // cada case comeca o proprio processo na primeira etapa
+      state.pstep = 1;
+      state.pdir = 'down';
       render();
       window.scrollTo({ top: 0 });
     });
