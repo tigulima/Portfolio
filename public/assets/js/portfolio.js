@@ -31,7 +31,9 @@
       isAnjo: r === 'anjo',
 
       showSpectrum: true,
-      groupByStatus: true,
+      // os rotulos "On the App Store" / "Waiting on Apple" / "Built at work"
+      // que separavam a lista por status: a secao work e uma lista unica
+      groupByStatus: false,
       showPending: true,
 
       isEn: state.lang === 'en',
