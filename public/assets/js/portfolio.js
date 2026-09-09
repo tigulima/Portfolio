@@ -87,6 +87,11 @@
       if (el.textContent !== next) el.textContent = next;
     });
 
+    // o botao do menu: informa o estado a leitores de tela e e o que o CSS
+    // usa para cruzar as duas barras
+    var burger = document.querySelector('.navburger');
+    if (burger) burger.setAttribute('aria-expanded', state.menuOpen ? 'true' : 'false');
+
     wireShots();
     applyLang();
     markReveal();

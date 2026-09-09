@@ -43,12 +43,12 @@
 </nav>
 
 <div class="navmob">
-  <button data-act="toggleMenu" class="navburger" aria-label="Menu" type="button">
+  <button data-act="toggleMenu" class="navburger" aria-label="Menu" type="button" aria-expanded="false" aria-controls="menu-mobile">
     <span></span>
     <span></span>
   </button>
 </div>
-<div class="navsheet" data-cls="menuCls">
+<div class="navsheet" id="menu-mobile" data-cls="menuCls">
   <a data-act="menuWork">Work</a>
   <a data-act="menuAbout">About</a>
   <a data-act="menuExperience">Experience</a>

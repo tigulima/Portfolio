@@ -537,6 +537,18 @@ button,input,select,textarea{font:inherit;color:inherit}
 /* wrappers de rota: transparentes ao layout quando visiveis */
 [data-if][hidden]{display:none !important}
 
+/* ---- menu mobile --------------------------------------------------------
+   As duas barras se encontram no meio e cruzam: cada uma anda 3.25px, que e
+   metade da distancia entre os centros (1.5px de altura + 5px de gap). O
+   painel, que ate aqui aparecia seco, entra num fade. */
+.navburger span{transition:transform .28s var(--ease-emphasis)}
+.navburger[aria-expanded="true"] span:first-child{transform:translateY(3.25px) rotate(45deg)}
+.navburger[aria-expanded="true"] span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
+.navsheet{transition:opacity .28s var(--ease-standard)}
+@media (prefers-reduced-motion:reduce){
+  .navburger span,.navsheet{transition:none}
+}
+
 /* ---- estados :hover extraidos dos style-hover ---- */
 .hv-1:hover{background: var(--fill-secondary) !important}
 .hv-2:hover{color: var(--text-inverse) !important}
