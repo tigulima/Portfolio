@@ -1,0 +1,35 @@
+:root{
+/* Weights — display speaks at 300, subheads at 650. Never 700. */
+--font-weight-light:300;
+--font-weight-regular:400;
+--font-weight-medium:500;
+--font-weight-w650:650;
+
+/* Scale: size / line-height / tracking */
+--text-caption:10px;--leading-caption:1.5;
+--text-eyebrow:13px;--leading-eyebrow:1.23;--tracking-eyebrow:1.3px;
+--text-body-sm:16px;--leading-body-sm:2.19;
+--text-body:18px;--leading-body:1.5;--tracking-body:-0.36px;
+--text-body-lg:20px;--leading-body-lg:1.5;
+--text-subheading:22px;--leading-subheading:1.36;
+--text-heading-sm:24px;--leading-heading-sm:1.25;--tracking-heading-sm:-0.72px;
+--text-heading:48px;--leading-heading:1.17;--tracking-heading:-2.4px;
+--text-heading-lg:54px;--leading-heading-lg:1.11;--tracking-heading-lg:-2.16px;
+--text-display:112px;--leading-display:0.85;--tracking-display:-3.36px;
+
+/* Semantic roles */
+--type-display-family:var(--font-display-serif);
+--type-heading-family:var(--font-display-sans);
+--type-body-family:var(--font-body);
+--type-label-family:var(--font-mono)
+}
+/* Editorial type utilities — mirror the roles the source names, nothing more. */
+.t-display{font-family:var(--font-display-serif);font-weight:var(--font-weight-light);font-size:var(--text-display);line-height:var(--leading-display);letter-spacing:var(--tracking-display);color:var(--text-primary);margin:0}
+.t-heading{font-family:var(--font-display-sans);font-weight:var(--font-weight-w650);font-size:var(--text-heading);line-height:var(--leading-heading);letter-spacing:var(--tracking-heading);color:var(--text-primary);margin:0}
+.t-heading-lg{font-family:var(--font-body);font-weight:var(--font-weight-light);font-size:var(--text-heading-lg);line-height:var(--leading-heading-lg);letter-spacing:var(--tracking-heading-lg);color:var(--text-primary);margin:0}
+.t-heading-sm{font-family:var(--font-display-sans);font-weight:var(--font-weight-w650);font-size:var(--text-heading-sm);line-height:var(--leading-heading-sm);letter-spacing:var(--tracking-heading-sm);color:var(--text-primary);margin:0}
+.t-subheading{font-family:var(--font-body);font-weight:var(--font-weight-regular);font-size:var(--text-subheading);line-height:var(--leading-subheading);color:var(--text-primary);margin:0}
+.t-body{font-family:var(--font-body);font-weight:var(--font-weight-light);font-size:var(--text-body);line-height:var(--leading-body);letter-spacing:var(--tracking-body);color:var(--text-secondary);margin:0}
+.t-body-sm{font-family:var(--font-body);font-weight:var(--font-weight-regular);font-size:var(--text-body-sm);line-height:var(--leading-body-sm);color:var(--text-secondary);margin:0}
+.t-eyebrow{font-family:var(--font-mono);font-weight:var(--font-weight-regular);font-size:var(--text-eyebrow);line-height:var(--leading-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-secondary);margin:0}
+.t-caption{font-family:var(--font-body);font-size:var(--text-caption);line-height:var(--leading-caption);color:var(--text-tertiary);margin:0}

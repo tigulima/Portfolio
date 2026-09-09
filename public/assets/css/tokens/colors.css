@@ -1,0 +1,65 @@
+:root{
+/* Base palette — 96% achromatic, two editorial washes */
+--color-void-black:#020204;
+--color-pure-black:#000000;
+--color-carbon:#636363;
+--color-slate:#888888;
+--color-silver:#c6c6c6;
+--color-soft-graphite:#575757;
+--color-paper-white:#ffffff;
+--color-bone:#f8f8f8;
+--color-linen:#efefef;
+--color-lime-wash:#f2fcb3;
+--color-saffron:#ffdc5c;
+/* Spectrum marquee stops — the one chromatic signature */
+--color-spectrum-pink:#fd02f5;
+--color-spectrum-red:#fa3d1d;
+--color-spectrum-yellow:#ffb005;
+--color-spectrum-lavender:#e1e1fe;
+--color-spectrum-blue:#0358f7;
+--color-spectrum-brown:#340b05;
+--color-spectrum-marquee:#fa3d1d;
+
+/* Surfaces (level 0 → 4) */
+--surface-void:#020204;
+--surface-paper:#f8f8f8;
+--surface-card:#ffffff;
+--surface-linen:#efefef;
+--surface-wash:#f2fcb3;
+--surface-wash-warm:#ffdc5c;
+
+/* Semantic text */
+--text-primary:#000000;
+--text-secondary:#636363;
+--text-tertiary:#888888;
+--text-placeholder:#c6c6c6;
+--text-inverse:#ffffff;
+--text-inverse-muted:rgba(255,255,255,0.7);
+--text-on-glass:rgba(0,0,0,0.85);
+
+/* Borders & hairlines */
+--border-ink:#000000;
+--border-hairline:rgba(0,0,0,0.12);
+--border-hairline-strong:rgba(0,0,0,0.24);
+--border-inverse:rgba(255,255,255,0.18);
+--border-width:1px;
+
+/* Interactive fills */
+--fill-primary:#ffffff;
+--fill-primary-text:#000000;
+--fill-secondary:#efefef;
+--fill-secondary-hover:#e6e6e6;
+--fill-graphite:#575757;
+--fill-scrim:rgba(0,0,0,0.65);
+--fill-scrim-hover:rgba(0,0,0,0.8);
+--fill-glass:rgba(248,248,248,0.72);
+--fill-glass-dark:rgba(2,2,4,0.55);
+--fill-transparent-hover:rgba(0,0,0,0.05);
+--fill-disabled:#efefef;
+--text-disabled:#c6c6c6;
+
+/* Links */
+--link-color:#000000;
+--link-color-hover:#636363;
+--link-underline:rgba(0,0,0,0.35)
+}

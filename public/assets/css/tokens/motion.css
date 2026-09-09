@@ -1,0 +1,10 @@
+:root{
+/* Things change color, not position. */
+--duration-fast:0.2s;
+--duration-marquee:14s;
+--ease-standard:ease;
+--ease-emphasis:cubic-bezier(0.4,0,0.2,1);
+--transition-color:background-color var(--duration-fast) var(--ease-standard),border-color var(--duration-fast) var(--ease-standard),color var(--duration-fast) var(--ease-standard),fill var(--duration-fast) var(--ease-standard),stroke var(--duration-fast) var(--ease-standard),opacity var(--duration-fast) var(--ease-standard);
+}
+@keyframes tarde-marquee{from{background-position:0% 50%}to{background-position:200% 50%}}
+@media (prefers-reduced-motion:reduce){:root{--duration-marquee:0s}}

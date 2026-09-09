@@ -1,0 +1,10 @@
+:root{
+/* Borders are the primary depth cue. Shadows only for floating things. */
+--shadow-sm:rgba(0,0,0,0.06) 0px 2px 8px 0px,rgba(0,0,0,0.04) 0px 0px 2px 0px;
+--shadow-xl:rgba(0,0,0,0.6) 0px 8px 30px -8px;
+/* Reserved for product screenshot windows ONLY (a filter, not box-shadow) */
+--shadow-window:drop-shadow(rgba(0,0,0,0.1) 0px 2px 4px) drop-shadow(rgba(0,0,0,0.12) 0px 18px 24px) drop-shadow(rgba(0,0,0,0.18) 0px 40px 64px);
+/* Glass */
+--blur-glass:12px;
+--blur-glass-strong:24px;
+}

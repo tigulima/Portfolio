@@ -1,0 +1,17 @@
+:root{
+/* Spacing scale — measured from source, deliberately not a 4/8 grid */
+--spacing-5:5px;--spacing-8:8px;--spacing-10:10px;--spacing-12:12px;--spacing-13:13px;
+--spacing-14:14px;--spacing-16:16px;--spacing-20:20px;--spacing-24:24px;--spacing-28:28px;
+--spacing-30:30px;--spacing-40:40px;--spacing-70:70px;--spacing-80:80px;--spacing-90:90px;
+
+/* Layout */
+--page-max-width:1200px;
+--section-gap:80px;
+--card-padding:20px;
+--element-gap:16px;
+--gutter:40px;
+--nav-inset:20px;
+/* Asymmetric two-column content rhythm: steps 40% / screenshot 55% */
+--col-narrow:40%;
+--col-wide:55%
+}

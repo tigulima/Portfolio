@@ -1,0 +1,14 @@
+:root{
+/* Only these five radii exist. Improvised values break coherence. */
+--radius-xl:12px;
+--radius-2xl:16px;
+--radius-2xl-2:20px;
+--radius-3xl:24px;
+--radius-full:9999px;
+/* Named by element */
+--radius-cards:12px;
+--radius-nav:16px;
+--radius-pills:20px;
+--radius-panels:24px;
+--radius-buttons:9999px
+}
