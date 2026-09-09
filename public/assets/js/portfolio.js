@@ -18,6 +18,34 @@
   var reduced = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // ---- secao de processo --------------------------------------------------
+  // So conta como processo o que segue o formato do Sleevee: cada etapa com a
+  // sua foto e a sua descricao, num .ppanel. As outras formas que o design
+  // deixou pelo caminho - a lista com os nomes das etapas e nada mais, ou o
+  // texto de "Your words needed" - ficam ocultas ate serem escritas.
+  //
+  // O criterio e estrutural, entao um case que ganhar o processo depois passa a
+  // mostra-lo sozinho, com quantas etapas tiver e com os nomes que tiver.
+  function podarProcessos() {
+    document.querySelectorAll(
+      '[data-screen-label^="Case"] [style*="var(--col-narrow)"]'
+    ).forEach(function (linha) {
+      var pareceProcesso = linha.querySelector('ol') ||
+                           linha.querySelector('[data-process-todo]');
+      if (!pareceProcesso) return;                    // e outra linha qualquer
+      if (linha.querySelector('.ppanel')) return;     // esta preenchida
+      linha.hidden = true;
+    });
+  }
+
+  // onN e resolvido contra a etapa atual em vez de sair de uma lista fixa, para
+  // o processo aceitar quantas etapas o case tiver.
+  function valorDe(chave, v) {
+    var etapa = /^on(\d+)$/.exec(chave);
+    if (etapa) return state.pstep === parseInt(etapa[1], 10);
+    return v[chave];
+  }
+
   // ---- valores derivados, o equivalente ao renderVals() do original --------
   function vals() {
     var r = state.route, s = state.section, cur = state.pstep;
@@ -52,7 +80,6 @@
 
       pdir: state.pdir
     };
-    for (var i = 1; i <= 7; i++) v['on' + i] = cur === i;
     return v;
   }
 
@@ -61,14 +88,15 @@
     var v = vals();
 
     document.querySelectorAll('[data-if]').forEach(function (el) {
-      el.hidden = !v[el.getAttribute('data-if')];
+      el.hidden = !valorDe(el.getAttribute('data-if'), v);
     });
     document.querySelectorAll('[data-bind-active]').forEach(function (el) {
       if (v[el.getAttribute('data-bind-active')]) el.setAttribute('data-active', '');
       else el.removeAttribute('data-active');
     });
     document.querySelectorAll('[data-bind-on]').forEach(function (el) {
-      el.setAttribute('data-on', v[el.getAttribute('data-bind-on')] ? 'true' : 'false');
+      el.setAttribute('data-on',
+        valorDe(el.getAttribute('data-bind-on'), v) ? 'true' : 'false');
     });
     document.querySelectorAll('[data-bind-dir]').forEach(function (el) {
       el.setAttribute('data-dir', v[el.getAttribute('data-bind-dir')]);
@@ -520,21 +548,26 @@
         function () { openCase(slug); };
     });
 
-  for (var i = 1; i <= 7; i++) {
-    (function (n) {
-      actions['p' + n] = function () {
-        state.pdir = n > state.pstep ? 'down' : 'up';
-        state.pstep = n;
-        followStep(n);
-        render();
-      };
-    })(i);
+  // clique num passo do processo: pN, com N vindo do proprio atributo, para
+  // nao depender de quantas etapas o case tem
+  function irParaEtapa(n) {
+    state.pdir = n > state.pstep ? 'down' : 'up';
+    state.pstep = n;
+    followStep(n);
+    render();
   }
 
   document.addEventListener('click', function (ev) {
     var el = ev.target.closest('[data-act]');
     if (!el) return;
-    var fn = actions[el.getAttribute('data-act')];
+    var act = el.getAttribute('data-act');
+    var etapa = /^p(\d+)$/.exec(act);
+    if (etapa) {
+      ev.preventDefault();
+      irParaEtapa(parseInt(etapa[1], 10));
+      return;
+    }
+    var fn = actions[act];
     if (!fn) return;
     ev.preventDefault();
     fn();
@@ -555,6 +588,9 @@
     // a escala dos aparelhos do hero, que era uma prop do editor
     var hv = document.querySelector('[data-hero-vars]');
     if (hv) hv.style.setProperty('--ph-scale', '1.45');
+
+    // antes do primeiro render: some com os processos ainda nao escritos
+    podarProcessos();
 
     // o endereco manda na rota inicial, entao um link para um case abre nele
     var inicial = routeFromUrl();
