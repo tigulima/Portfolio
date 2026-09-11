@@ -351,24 +351,55 @@ button,input,select,textarea{font:inherit;color:inherit}
       #hero { height: 400svh !important; }
       /* the stage is clipped, so the pile gets the full height minus the burger
          clearance, and the device is sized from what is left after its caption */
-      .herophones { top: 84px !important; bottom: 16px !important; align-items: flex-start !important; }
-      .phones { display: block !important; position: relative; height: 100%; }
-      .phones > a { position: absolute !important; left: 50%; top: 0;
-        width: min(74vw, 272px, calc((100svh - 296px) / 2.044));
-        transition: opacity 0.32s ease, translate 0.38s cubic-bezier(0.2, 0, 0.2, 1), scale 0.38s cubic-bezier(0.2, 0, 0.2, 1); }
+      .herophones {
+        top: clamp(66px, 8.5svh, 80px) !important;
+        bottom: max(16px, env(safe-area-inset-bottom, 16px)) !important;
+        align-items: flex-start !important;
+      }
+      .phones { display: block !important; position: relative; height: 100%; padding: 0 !important; }
+      .phones > a {
+        position: absolute !important;
+        left: 50%;
+        top: 0;
+        transform-origin: center top !important;
+        --hero-non-device-h: clamp(202px, 24.5svh, 228px);
+        width: min(
+          calc(100vw - 36px),
+          86vw,
+          420px,
+          calc((100svh - var(--hero-non-device-h)) / 2.0444)
+        ) !important;
+        transition: opacity 0.32s ease, translate 0.38s cubic-bezier(0.2, 0, 0.2, 1), scale 0.38s cubic-bezier(0.2, 0, 0.2, 1);
+      }
+      .phones a > div { width: 100% !important; align-items: center !important; }
       .phones a > div > div:not(.tipbox) { height: auto !important; width: 100% !important; }
       /* the description sits above its own device, as plain text — no glass box */
-      .tipbox { display: flex !important; position: static !important; width: auto !important;
-        order: -1; margin: 0 0 var(--spacing-16); padding: 0 !important;
-        background: none !important; border: none !important; box-shadow: none !important;
-        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
-        text-align: center; align-items: center;
-        max-height: 168px; overflow: hidden;
-        opacity: 0; translate: none !important; transition: opacity 0.3s ease; }
+      .tipbox {
+        display: flex !important;
+        position: static !important;
+        width: min(88vw, 360px) !important;
+        align-self: center !important;
+        order: -1;
+        margin: 0 0 clamp(10px, 1.8svh, 16px) !important;
+        padding: 0 !important;
+        gap: clamp(4px, 1svh, 8px) !important;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        text-align: center;
+        align-items: center;
+        max-height: 168px;
+        overflow: hidden;
+        opacity: 0;
+        translate: none !important;
+        transition: opacity 0.3s ease;
+      }
       .phones > a[data-front="1"] .tipbox { opacity: 1; }
       /* behind the front device: nudged down and scaled back */
-      .phones > a[data-pos="1"] { translate: -50% 26px; scale: 0.94; opacity: 1; z-index: 2; }
-      .phones > a[data-pos="2"] { translate: -50% 48px; scale: 0.88; opacity: 1; z-index: 1; }
+      .phones > a[data-pos="1"] { translate: -50% 20px; scale: 0.95; opacity: 1; z-index: 2; }
+      .phones > a[data-pos="2"] { translate: -50% 38px; scale: 0.90; opacity: 1; z-index: 1; }
       .phones > a[data-pos="0"] { translate: -50% 0; scale: 1; opacity: 1; z-index: 3; }
       /* already taken off the pile */
       .phones > a[data-pos="-1"] { translate: -50% -70svh; scale: 0.96; opacity: 0; z-index: 4; pointer-events: none; }
