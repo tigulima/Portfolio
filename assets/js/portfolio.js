@@ -453,7 +453,7 @@
   var returnSlug = null;
 
   // ---- historico: cada case e uma entrada, para o voltar do navegador -----
-  // O endereco usa hash e nao caminho de propriedade: o Firebase Hosting serve
+  // O endereco usa hash e nao caminho de propriedade: a hospedagem serve
   // arquivos estaticos, entao recarregar /etique daria 404 sem um rewrite.
   var SLUGS = ['etique', 'canario', 'subtract', 'sleevee', 'extensionista', 'anjo'];
 
